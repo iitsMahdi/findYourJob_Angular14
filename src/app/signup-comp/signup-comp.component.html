@@ -1,0 +1,61 @@
+<app-header></app-header>
+<body class="form-v10">
+
+	<div class="page-content">
+
+		<div class="form-v10-content">
+			<form [formGroup]="companyForm" class="form-detail" action="#" method="post" id="myform" (ngSubmit)="onSubmit()">
+				<div class="form-left">
+        <b><h2>Manager Infomation</h2></b><br><br>
+        <div class="form-group">
+						<div class="form-row form-row-1">
+							<input type="text" name="first_name" id="first_name" class="input-text" placeholder="First Name" formControlName="first_name" required>
+						</div>
+						<div class="form-row form-row-2">
+							<input type="text" name="last_name" id="last_name" class="input-text" placeholder="Last Name" formControlName="last_name" required>
+						</div>
+					</div>
+					<div class="form-row">
+						<input type="text" name="email" class="company" id="email" placeholder="email" formControlName="email" required>
+					</div>
+          <div class="form-row">
+						<input type="password" name="password" class="company" id="password" placeholder="password" formControlName="password" required>
+					</div>
+				</div>
+				<div class="form-right">
+					<b><h2>Company Details</h2></b><br><br>
+					<div class="form-row">
+						<input type="text" name="cName" class="street" id="cName" placeholder="Company Name" formControlName="cName" required>
+					</div>
+					<div class="form-row">
+            <label for="img" style="color: white;">Company's Picture</label>
+						<input type="file" name="imgComp" class="additional" id="imgComp" placeholder="" formControlName="imgComp" required>
+					</div>
+
+					<div class="form-right">
+						<div class="form-row">
+              <input type="text" name="adress" class="street" id="cName" placeholder="Company address" formControlName="cName" required>
+            </div>
+					</div>
+					<div class="form-row">
+						<select name="location" formControlName="location"  (change)="selectChangeHandler1($event)" aria-placeholder="Location">
+              <option *ngFor="let loc of locations" [value]="loc.nom">{{loc.nom}}</option>
+            </select>
+						<span class="select-btn">
+						  	<i class="zmdi zmdi-chevron-down"></i>
+						</span>
+					</div>
+					<div class="form-group">
+						<div class="form-right">
+              <div class="form-row">
+							<input type="text" name="phone" class="phone" id="phone" placeholder="Phone Number" formControlName="phone" required>
+						</div>
+					</div>
+        </div>
+					<div class="form-row-last">
+						<input type="submit" name="register" class="register" value="Register Badge">
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>

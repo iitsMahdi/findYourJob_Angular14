@@ -1,0 +1,163 @@
+.banner{
+  position: relative;
+}
+.heading{
+  color:rgb(233, 201, 236);
+  position: absolute;
+  top: 35%;
+  width:100%;
+  text-align: center;
+  font-size: 100px;
+  font-weight: bolder;
+}
+
+.homeFot{
+  width: 100%;
+  height: 900px;
+}
+.devant-img{
+  width: 100%;
+  height:60px;
+  color: blue;
+  background-color: aqua;
+}
+
+.search {
+  width: 100%;
+  position: relative;
+  display: flex;
+}
+
+.searchTerm {
+  width: 150%;
+  border: 3px solid rgb(233, 201, 236);
+  border-right: none;
+  padding: 10px;
+  height: 50px;
+  border-radius: 20px 20px 20px 20px;
+  outline: none;
+  color: #9DBFAF;
+}
+
+.searchTerm:focus{
+  color: rgb(0, 0, 0);
+}
+
+.searchButton {
+  width: 50px;
+  height: 50px;
+  border: 1px solid rgb(233, 201, 236);
+  background: #00B4CC;
+  text-align: center;
+  color: rgb(233, 201, 236);
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+/*Resize the wrap to see the search bar change!*/
+.wrap{
+  width: 30%;
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.button {
+  background-color: Transparent;
+  background-repeat:no-repeat;
+border-radius: 5%;
+
+border-color: #fff;
+cursor:pointer;
+  overflow: hidden;
+  text-align: center;
+}
+
+.div-bunner{
+position: absolute;
+background-color: #4d64f8d9;
+top: 83.3%;
+width: 100%;
+height: 150px;
+}
+
+.div-bunner1{
+text-align: center;
+color: #fff;
+font-weight: bold;
+font-size: 40px;
+}
+.div-bunner2{
+  text-align: center;
+  color: #fff;
+  font-size: 20px;
+  }
+  .div-bunner3{
+    text-align: center;
+    }
+
+
+/*btn*/
+.btn-search {
+  width: 70px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  position: absolute ;
+  left: 0;
+  height: 100%;
+  background: transparent;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  display: flex;
+  -ms-flex-pack: center;
+  justify-content: center;
+  align-items: center;
+}
+.btn-search svg {
+  fill: #ccc;
+  width: 30px;
+  height: 30px;
+  transition: all .2s ease-out, color .2s ease-out;
+}
+input {
+  height: 100%;
+  width: 100%;
+  background: transparent;
+  border: 0;
+  background: #fff;
+  display: block;
+  width: 100%;
+  padding: 10px 32px 10px 70px;
+  font-size: 18px;
+  color: #666;
+  border-radius: 34px;
+}
+input.placeholder {
+  color: #ccc;
+  font-size: 18px;
+}
+nput:-moz-placeholder {
+  color: #ccc;
+  font-size: 18px;
+}
+@media screen and (max-width: 767px) {
+  .input-field {
+    margin-bottom: 20px;
+    height: 50px;
+  }
+  .input-field input {
+    padding-left: 55px;
+    font-size: 16px;
+  }
+   .btn-search svg {
+    width: 26px;
+    height: 26px;
+  }
+}
+.btn-search:hover svg,.btn-search:focus svg {
+  fill: #666;
+}

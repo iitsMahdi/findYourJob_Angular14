@@ -1,0 +1,66 @@
+<app-header-company></app-header-company>
+<div class="cont">
+<div class="container">
+
+  <div class="row">
+    <div class="col-md-12 col-md-offset-3">
+        <form [formGroup]="jobDetails1" id="msform">
+            <!-- progressbar -->
+            <ul id="progressbar">
+              <li [ngClass]="step>=1 ? 'active ' : 'inactive'">Job Details</li>
+              <li [ngClass]="step>=2 ? 'active' : 'inactive'">Job Details</li>
+              <li [ngClass]="step==3 ? 'active' : 'inactive'">Job Details</li>
+          </ul>
+            <!-- fieldsets -->
+
+            <fieldset  *ngIf="step == 1" >
+                <h2 class="fs-title">Job Details</h2>
+                <br><br><br>
+                <div class="title"><b>Location</b></div>
+                <div class="souTitle">which store location do you want to use?</div><br>
+                <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" name="location" formControlName="location"  (change)="selectChangeHandler1($event)">
+                  <option *ngFor="let loc of locations" [value]="loc.nom">{{loc.nom}}</option>
+                </select>
+                <input (click)="next()" type="button" name="next" class="next action-button" value="Next"/>
+            </fieldset>
+        </form>
+         <form [formGroup]="jobDetails2" id="msform">
+            <fieldset *ngIf="step == 2" >
+                <h2 class="fs-title">Job Details</h2>
+                <br><br><br>
+                <div class="title">What is the position job title?</div>
+                <div class="souTitle">Accurate job types help job seekers find your posting</div>
+                <input type="text" formControlName="Title"  placeholder="Job Title" name="Title"/><br>
+
+                <div class="title">What is the position job category?</div>
+                <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" name="category" formControlName="category" (change)="selectChangeHandler2($event)">
+                  <option *ngFor="let cat of categories" [value]="cat.libelle">{{cat.libelle}}</option>
+                </select>
+                <input (click)="previous()" type="button" name="previous" class="previous action-button-previous" value="Previous"/>
+                <input  (click)="next()" type="button" name="next" class="next action-button" value="Next"/>
+            </fieldset>
+        </form>
+         <form [formGroup]="jobDetails3" id="msform" (ngSubmit)="onSubmit()">
+            <fieldset *ngIf="step == 3">
+                <h2 class="fs-title">Job Details</h2>
+                <br><br><br>
+                <div class="title">Salary</div>
+                <div class="souTitle">What does the job pay?</div>
+                <input type="number" formControlName="salary" placeholder="Salary" name="salary"/><br>
+
+                <div class="title">Add a job description</div>
+                <div class="souTitle">Most condidates are focused on this part,so keep it so informative</div>
+                <textarea rows="5" cols="5" formControlName="desc"  placeholder="Job description" name="desc"></textarea>
+
+                <input (click)="previous()" type="button" name="previous" class="previous action-button-previous" value="Previous"/>
+                <input (click)="pay(59)" type="submit" name="submit" class="submit action-button" value="Add job"/>
+            </fieldset>
+        </form>
+
+    </div>
+</div>
+<br><br><br><br><br><br><br><br><br><br><br>
+
+</div>
+
+</div>
